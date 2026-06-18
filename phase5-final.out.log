@@ -1,0 +1,4 @@
+2026-06-18 01:37:52,906 INFO [mocky_pops.api] GET /health -> 200 6.40ms
+INFO:     127.0.0.1:61432 - "GET /health HTTP/1.1" 200 OK
+2026-06-18 01:37:52,965 INFO [mocky_pops.api] GET /health/db -> 200 4.16ms
+INFO:     127.0.0.1:61432 - "GET /health/db HTTP/1.1" 200 OK

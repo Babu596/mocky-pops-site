@@ -1,0 +1,30 @@
+2026-06-18 01:26:42,233 INFO [mocky_pops.api] GET /health -> 200 3.37ms
+INFO:     127.0.0.1:60181 - "GET /health HTTP/1.1" 200 OK
+2026-06-18 01:26:42,435 INFO [mocky_pops.api] POST /api/auth/register -> 201 182.15ms
+INFO:     127.0.0.1:60182 - "POST /api/auth/register HTTP/1.1" 201 Created
+2026-06-18 01:26:42,497 INFO [mocky_pops.api] POST /api/auth/login -> 200 47.15ms
+INFO:     127.0.0.1:60186 - "POST /api/auth/login HTTP/1.1" 200 OK
+2026-06-18 01:26:42,529 INFO [mocky_pops.api] GET /api/customers/me -> 200 21.50ms
+INFO:     127.0.0.1:60187 - "GET /api/customers/me HTTP/1.1" 200 OK
+2026-06-18 01:26:42,545 INFO [mocky_pops.api] POST /api/customers/me/addresses -> 201 17.70ms
+INFO:     127.0.0.1:60189 - "POST /api/customers/me/addresses HTTP/1.1" 201 Created
+2026-06-18 01:26:42,583 INFO [mocky_pops.api] GET /api/products/citrus-pop-mojito -> 200 25.73ms
+INFO:     127.0.0.1:60190 - "GET /api/products/citrus-pop-mojito HTTP/1.1" 200 OK
+2026-06-18 01:26:42,665 INFO [mocky_pops.api] POST /api/cart/items -> 201 71.33ms
+INFO:     127.0.0.1:60191 - "POST /api/cart/items HTTP/1.1" 201 Created
+2026-06-18 01:26:42,731 INFO [mocky_pops.notifications] notification queued audience=customer channel=in_app title=Order confirmed
+2026-06-18 01:26:42,753 INFO [mocky_pops.notifications] notification queued audience=admin channel=in_app title=New order alert
+2026-06-18 01:26:42,767 INFO [mocky_pops.api] POST /api/orders -> 201 105.54ms
+INFO:     127.0.0.1:60194 - "POST /api/orders HTTP/1.1" 201 Created
+2026-06-18 01:26:42,805 INFO [mocky_pops.api] PATCH /api/orders/MP-260617-195642-730/cancel -> 200 24.25ms
+INFO:     127.0.0.1:60196 - "PATCH /api/orders/MP-260617-195642-730/cancel HTTP/1.1" 200 OK
+2026-06-18 01:26:42,867 INFO [mocky_pops.api] POST /api/delivery/partners -> 201 60.98ms
+INFO:     127.0.0.1:60197 - "POST /api/delivery/partners HTTP/1.1" 201 Created
+2026-06-18 01:26:42,911 INFO [mocky_pops.api] POST /api/auth/login -> 200 35.63ms
+INFO:     127.0.0.1:60199 - "POST /api/auth/login HTTP/1.1" 200 OK
+2026-06-18 01:26:42,957 INFO [mocky_pops.api] GET /api/delivery/orders -> 200 45.00ms
+INFO:     127.0.0.1:60201 - "GET /api/delivery/orders HTTP/1.1" 200 OK
+2026-06-18 01:26:43,022 INFO [mocky_pops.api] POST /api/ai/chat -> 200 61.80ms
+INFO:     127.0.0.1:60202 - "POST /api/ai/chat HTTP/1.1" 200 OK
+2026-06-18 01:26:43,045 INFO [mocky_pops.api] GET /api/ai/recommendations -> 200 14.51ms
+INFO:     127.0.0.1:60204 - "GET /api/ai/recommendations?weather=hot&time_of_day=evening HTTP/1.1" 200 OK

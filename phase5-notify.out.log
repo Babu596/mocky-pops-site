@@ -1,0 +1,10 @@
+2026-06-18 01:27:08,015 INFO [mocky_pops.api] POST /api/auth/register -> 201 155.84ms
+INFO:     127.0.0.1:60488 - "POST /api/auth/register HTTP/1.1" 201 Created
+2026-06-18 01:27:08,147 INFO [mocky_pops.api] POST /api/auth/login -> 200 40.90ms
+INFO:     127.0.0.1:60491 - "POST /api/auth/login HTTP/1.1" 200 OK
+2026-06-18 01:27:08,227 INFO [mocky_pops.notifications] notification queued audience=customer channel=in_app title=Order confirmed
+2026-06-18 01:27:08,244 INFO [mocky_pops.notifications] notification queued audience=admin channel=in_app title=New order alert
+2026-06-18 01:27:08,272 INFO [mocky_pops.api] POST /api/orders -> 201 112.91ms
+INFO:     127.0.0.1:60493 - "POST /api/orders HTTP/1.1" 201 Created
+2026-06-18 01:27:08,291 INFO [mocky_pops.api] GET /api/notifications -> 200 13.69ms
+INFO:     127.0.0.1:60496 - "GET /api/notifications HTTP/1.1" 200 OK

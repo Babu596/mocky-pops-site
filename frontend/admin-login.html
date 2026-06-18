@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="admin-login" class="admin-auth-body">
+    <main class="admin-auth-shell">
+      <section class="admin-auth-panel">
+        <a class="brand admin-auth-brand" href="index.html" aria-label="Mocky Pops home">
+          <span class="brand-mark">MP</span>
+          <span>
+            <strong>Mocky Pops</strong>
+            <small>Owner control room</small>
+          </span>
+        </a>
+
+        <div>
+          <p class="eyebrow">Admin access</p>
+          <h1>Manage orders, products and sales</h1>
+        </div>
+
+        <form class="admin-form" data-admin-login-form>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" autocomplete="current-password" required />
+          </label>
+          <button class="admin-primary-button" type="submit">Login</button>
+          <p class="admin-message" data-admin-login-message></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

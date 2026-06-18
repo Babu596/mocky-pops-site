@@ -1,0 +1,5 @@
+INFO:     127.0.0.1:52536 - "POST /api/auth/register HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51626 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51628 - "POST /api/business/gift-cards HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51629 - "POST /api/orders HTTP/1.1" 201 Created
+INFO:     127.0.0.1:51631 - "GET /api/business/gift-cards/MPGC-2A456CF2E6 HTTP/1.1" 200 OK

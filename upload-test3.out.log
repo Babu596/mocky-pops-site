@@ -1,0 +1,4 @@
+2026-06-18 01:58:30,610 INFO [mocky_pops.api] POST /api/auth/login -> 200 115.41ms
+INFO:     127.0.0.1:57924 - "POST /api/auth/login HTTP/1.1" 200 OK
+2026-06-18 01:58:30,698 INFO [mocky_pops.api] POST /api/admin/uploads -> 201 10.01ms
+INFO:     127.0.0.1:57927 - "POST /api/admin/uploads HTTP/1.1" 201 Created

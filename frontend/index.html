@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mocky Pops is a premium mocktail, shake, beverage and cafe delivery platform built for online ordering and future franchise expansion."
+    />
+    <title>Mocky Pops | Mocktail & Cafe Delivery</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="home">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="Mocky Pops home">
+        <span class="brand-mark">MP</span>
+        <span>
+          <strong>Mocky Pops</strong>
+          <small>Craft mocktails delivered</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#menu">Menu</a>
+        <a href="franchise.html">Franchise</a>
+        <a href="gift-card.html">Gift Cards</a>
+        <a href="#business">Business</a>
+        <a href="events.html">Events</a>
+        <a href="profile.html">Profile</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="social-icon" href="https://www.instagram.com/drinkmockypops" data-social-instagram target="_blank" rel="noreferrer" aria-label="Instagram">
+          <span aria-hidden="true">IG</span>
+        </a>
+        <a class="icon-button" href="#menu" aria-label="Search menu">
+          <span aria-hidden="true">S</span>
+        </a>
+        <a class="icon-button" href="login.html" aria-label="Customer login">
+          <span aria-hidden="true">U</span>
+        </a>
+        <button class="cart-button" type="button" data-cart-open>
+          Cart <span data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <picture>
+          <source
+            media="(max-width: 720px)"
+            srcset="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=80"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1800&q=82"
+            alt="Colorful premium mocktails served with fruit garnish"
+          />
+        </picture>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Premium cafe delivery platform</p>
+          <h1>Mocky Pops</h1>
+          <p>
+            Fresh mocktails, shakes, quick bites, gift cards and event orders
+            from one scalable ordering system.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#menu">Order Now</a>
+            <a class="secondary-action" href="franchise.html">Apply Franchise</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-strip" aria-label="Delivery highlights">
+        <article>
+          <span>25-35 min</span>
+          <strong>Live order tracking</strong>
+        </article>
+        <article>
+          <span>4.8 rated</span>
+          <strong>Freshly mixed beverages</strong>
+        </article>
+        <article>
+          <span>COD + Online</span>
+          <strong>Secure checkout ready</strong>
+        </article>
+        <article>
+          <span>Franchise</span>
+          <strong>Multi-store foundation</strong>
+        </article>
+      </section>
+
+      <section class="offers-section">
+        <div class="section-heading">
+          <p class="eyebrow">Today at Mocky Pops</p>
+          <h2>Offers built for high-repeat customers</h2>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-card coral">
+            <span>WELCOME20</span>
+            <h3>20% off first online order</h3>
+            <p>For new customers ordering through the Mocky Pops platform.</p>
+          </article>
+          <article class="offer-card mint">
+            <span>PARTYBOX</span>
+            <h3>Bulk mocktail box for events</h3>
+            <p>Pre-book chilled party packs for birthdays and corporate events.</p>
+          </article>
+          <article class="offer-card gold">
+            <span>GIFTJOY</span>
+            <h3>Digital gift cards</h3>
+            <p>Send custom messages and redeem wallet balance at checkout.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu">
+        <div class="section-heading">
+          <p class="eyebrow">Menu</p>
+          <h2>Order mocktails, shakes and bites</h2>
+        </div>
+
+        <div class="menu-toolbar">
+          <label class="search-box">
+            <span aria-hidden="true">S</span>
+            <input type="search" placeholder="Search drinks, ingredients or food" data-search />
+          </label>
+          <div class="category-tabs" role="tablist" aria-label="Product categories">
+            <button class="active" type="button" data-category="all">All</button>
+            <button type="button" data-category="mocktails">Mocktails</button>
+            <button type="button" data-category="shakes">Shakes</button>
+            <button type="button" data-category="coffee">Coffee</button>
+            <button type="button" data-category="food">Food</button>
+          </div>
+        </div>
+
+        <div class="menu-status">
+          <p data-product-count>Loading products...</p>
+        </div>
+
+        <div class="product-grid" data-products aria-live="polite">
+          <template>
+          <article class="product-card" data-name="Citrus Pop Mojito lime mint soda" data-category="mocktails">
+            <img src="https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?auto=format&fit=crop&w=700&q=80" alt="Citrus Pop Mojito" />
+            <div class="product-body">
+              <div>
+                <h3>Citrus Pop Mojito</h3>
+                <p>Lime, mint, cane syrup, soda sparkle</p>
+              </div>
+              <div class="custom-row">
+                <span>Sugar</span>
+                <select aria-label="Sugar level">
+                  <option>Regular</option>
+                  <option>Less</option>
+                  <option>No added</option>
+                </select>
+              </div>
+              <div class="custom-row">
+                <span>Ice</span>
+                <select aria-label="Ice level">
+                  <option>Normal</option>
+                  <option>Light</option>
+                  <option>Extra</option>
+                </select>
+              </div>
+              <footer>
+                <strong>₹149</strong>
+                <button type="button" data-add="Citrus Pop Mojito" data-price="149">Add</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Berry Blush Fizz strawberry cranberry basil" data-category="mocktails">
+            <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=700&q=80" alt="Berry Blush Fizz" />
+            <div class="product-body">
+              <div>
+                <h3>Berry Blush Fizz</h3>
+                <p>Strawberry, cranberry, basil, tonic</p>
+              </div>
+              <div class="custom-row">
+                <span>Topping</span>
+                <select aria-label="Topping">
+                  <option>Basil</option>
+                  <option>Mint</option>
+                  <option>Berry pearls</option>
+                </select>
+              </div>
+              <div class="custom-row">
+                <span>Ice</span>
+                <select aria-label="Ice level">
+                  <option>Normal</option>
+                  <option>Light</option>
+                  <option>Extra</option>
+                </select>
+              </div>
+              <footer>
+                <strong>₹179</strong>
+                <button type="button" data-add="Berry Blush Fizz" data-price="179">Add</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Belgian Choco Shake chocolate milk cream" data-category="shakes">
+            <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=700&q=80" alt="Belgian Choco Shake" />
+            <div class="product-body">
+              <div>
+                <h3>Belgian Choco Shake</h3>
+                <p>Dark chocolate, chilled milk, cream whip</p>
+              </div>
+              <div class="custom-row">
+                <span>Sweetness</span>
+                <select aria-label="Sweetness">
+                  <option>Regular</option>
+                  <option>Less sweet</option>
+                  <option>Extra sweet</option>
+                </select>
+              </div>
+              <div class="custom-row">
+                <span>Add-on</span>
+                <select aria-label="Add on">
+                  <option>None</option>
+                  <option>Brownie chunks</option>
+                  <option>Choco chips</option>
+                </select>
+              </div>
+              <footer>
+                <strong>₹199</strong>
+                <button type="button" data-add="Belgian Choco Shake" data-price="199">Add</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Paneer Tikka Wrap food quick bites" data-category="food">
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=700&q=80" alt="Paneer Tikka Wrap" />
+            <div class="product-body">
+              <div>
+                <h3>Paneer Tikka Wrap</h3>
+                <p>Smoky paneer, crisp vegetables, house sauce</p>
+              </div>
+              <div class="custom-row">
+                <span>Spice</span>
+                <select aria-label="Spice level">
+                  <option>Medium</option>
+                  <option>Mild</option>
+                  <option>Hot</option>
+                </select>
+              </div>
+              <div class="custom-row">
+                <span>Side</span>
+                <select aria-label="Side">
+                  <option>Chips</option>
+                  <option>Salad</option>
+                  <option>Dip</option>
+                </select>
+              </div>
+              <footer>
+                <strong>₹169</strong>
+                <button type="button" data-add="Paneer Tikka Wrap" data-price="169">Add</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Mocky Pops Gift Card digital gift balance" data-category="gift">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=700&q=80" alt="Mocky Pops gift card" />
+            <div class="product-body">
+              <div>
+                <h3>Digital Gift Card</h3>
+                <p>Send a custom message and redeem at checkout</p>
+              </div>
+              <div class="custom-row">
+                <span>Value</span>
+                <select aria-label="Gift card value">
+                  <option>₹500</option>
+                  <option>₹1000</option>
+                  <option>₹2000</option>
+                </select>
+              </div>
+              <div class="custom-row">
+                <span>Delivery</span>
+                <select aria-label="Gift card delivery">
+                  <option>Email</option>
+                  <option>WhatsApp</option>
+                </select>
+              </div>
+              <footer>
+                <strong>₹500</strong>
+                <button type="button" data-add="Digital Gift Card" data-price="500">Add</button>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-name="Mango Cloud Shake mango vanilla cream" data-category="shakes">
+            <img src="https://images.unsplash.com/photo-1622484211148-7facf70e70f9?auto=format&fit=crop&w=700&q=80" alt="Mango Cloud Shake" />
+            <div class="product-body">
+              <div>
+                <h3>Mango Cloud Shake</h3>
+                <p>Alphonso mango, vanilla, soft cream</p>
+              </div>
+              <div class="custom-row">
+                <span>Milk</span>
+                <select aria-label="Milk choice">
+                  <option>Dairy</option>
+                  <option>Oat</option>
+                  <option>Almond</option>
+                </select>
+              </div>
+              <div class="custom-row">
+                <span>Topping</span>
+                <select aria-label="Topping">
+                  <option>Mango cubes</option>
+                  <option>Whipped cream</option>
+                  <option>None</option>
+                </select>
+              </div>
+              <footer>
+                <strong>₹189</strong>
+                <button type="button" data-add="Mango Cloud Shake" data-price="189">Add</button>
+              </footer>
+            </div>
+          </article>
+          </template>
+        </div>
+      </section>
+
+      <section class="ai-section">
+        <div class="section-heading">
+          <p class="eyebrow">AI picks</p>
+          <h2>Personalized suggestions for your next sip</h2>
+        </div>
+        <div class="ai-recommendation-grid" data-ai-recommendations></div>
+      </section>
+
+      <section class="brand-story-section">
+        <div class="section-heading">
+          <p class="eyebrow">Why Mocky Pops</p>
+          <h2>Fresh mocktails with a premium delivery mood</h2>
+        </div>
+        <div class="brand-story-grid">
+          <article>
+            <span>01</span>
+            <h3>Made for cravings</h3>
+            <p>Bright mojitos, thick shakes, iced coffee and quick bites built for everyday delivery.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Party ready</h3>
+            <p>Bulk coolers, birthday counters and corporate beverage plans for high-energy gatherings.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Custom your sip</h3>
+            <p>Choose sugar, ice, toppings and sizes so every drink lands exactly how you like it.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Local outlet energy</h3>
+            <p>A growing outlet network keeps Mocky Pops fast, fresh and close to your neighbourhood.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section" id="franchise">
+        <div>
+          <p class="eyebrow">Franchise system</p>
+          <h2 data-franchise-headline>Start your Mocky Pops Franchise at Rs. 16,000</h2>
+          <p>
+            Launch a beverage-led outlet with Mocky Pops branding, product support,
+            digital ordering, royalty tracking and owner dashboard access.
+          </p>
+          <div class="franchise-actions">
+            <a class="primary-action" href="franchise.html">Franchise Enquiry</a>
+            <a class="secondary-action dark" href="https://wa.me/918584884975" data-social-whatsapp target="_blank" rel="noreferrer">WhatsApp Enquiry</a>
+          </div>
+        </div>
+        <form class="lead-form" data-franchise-form>
+          <label>
+            Full name
+            <input name="applicant_name" type="text" placeholder="Your name" required />
+          </label>
+          <label>
+            Phone
+            <input name="phone" type="tel" placeholder="8584884975" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            City / Area
+            <input name="location" type="text" placeholder="Preferred franchise city" required />
+          </label>
+          <label>
+            Investment range
+            <select name="investment_details">
+              <option>Rs. 16,000 starter enquiry</option>
+              <option>Rs. 50,000 growth setup</option>
+              <option>Rs. 1L+ outlet expansion</option>
+            </select>
+          </label>
+          <label>
+            Experience
+            <input name="experience_details" type="text" placeholder="Cafe, retail, business or first-time owner" />
+          </label>
+          <button type="submit">Submit Interest</button>
+          <p class="admin-message" data-phase4-message></p>
+        </form>
+        <form class="lead-form legacy-hidden" id="lead-form" hidden>
+          <label>
+            Full name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            City
+            <input type="text" placeholder="Preferred franchise city" />
+          </label>
+          <label>
+            Investment range
+            <select>
+              <option>₹5L - ₹10L</option>
+              <option>₹10L - ₹20L</option>
+              <option>₹20L+</option>
+            </select>
+          </label>
+          <button type="button">Submit Interest</button>
+        </form>
+      </section>
+
+      <section class="business-section" id="business">
+        <div class="section-heading">
+          <p class="eyebrow">Business orders</p>
+          <h2>Events, catering and subscriptions</h2>
+        </div>
+        <div class="business-grid">
+          <article>
+            <h3>Event booking</h3>
+            <p>Mocktail counters and beverage bars for private events.</p>
+          </article>
+          <article>
+            <h3>Corporate orders</h3>
+            <p>Scheduled office beverage deliveries and monthly billing.</p>
+          </article>
+          <article>
+            <h3>Subscriptions</h3>
+            <p>Weekly shake plans, loyalty points and repeat-order discounts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="gift-section" id="giftcards">
+        <div>
+          <p class="eyebrow">Gift cards</p>
+          <h2>Send a sip-worthy surprise</h2>
+          <p>
+            Gift balance checks, expiry rules and redemption will connect to the
+            checkout API in the ordering phase.
+          </p>
+        </div>
+        <div class="gift-card-preview">
+          <span>Mocky Pops</span>
+          <strong>₹1000</strong>
+          <small>To: Best Friend</small>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" data-cart-panel aria-label="Cart preview" aria-hidden="true">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button class="icon-button" type="button" data-cart-close aria-label="Close cart">×</button>
+      </div>
+      <div class="cart-items" data-cart-items>
+        <p class="empty-cart">Add a product to start an order.</p>
+      </div>
+      <div class="cart-total">
+        <span>Total</span>
+        <strong data-cart-total>Rs. 0</strong>
+      </div>
+      <div class="cart-actions">
+        <a class="checkout-button" href="cart.html">View Cart</a>
+        <a class="checkout-button secondary-checkout" href="checkout.html">Checkout</a>
+      </div>
+      <div class="order-status">
+        <span class="status-dot"></span>
+        Demo status: Preparing order
+      </div>
+    </aside>
+
+    <aside class="ai-chat-widget" aria-label="Mocky Pops AI assistant">
+      <div class="ai-chat-header">
+        <strong>Mocky AI</strong>
+        <span>Menu, offers and support</span>
+      </div>
+      <div class="ai-chat-messages" data-ai-chat-messages>
+        <article class="ai-message assistant">
+          <span>assistant</span>
+          <p>Ask me for drink suggestions, ingredients, offers or delivery help.</p>
+        </article>
+      </div>
+      <div class="ai-chat-suggestions" data-ai-chat-suggestions></div>
+      <form class="ai-chat-form" data-ai-chat-form>
+        <input name="message" placeholder="Ask Mocky AI..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </aside>
+
+    <a class="whatsapp-float" href="https://wa.me/918584884975" data-social-whatsapp target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+      <span>WA</span>
+    </a>
+
+    <footer class="premium-footer">
+      <div>
+        <a class="brand" href="#home">
+          <span class="brand-mark">MP</span>
+          <span>
+            <strong>Mocky Pops</strong>
+            <small>Craft mocktails delivered</small>
+          </span>
+        </a>
+        <p data-brand-description>Premium mocktails, shakes and party beverages crafted fresh for delivery, gifting, events and franchise growth.</p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/drinkmockypops" data-social-instagram target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/LostBABU.01" data-social-facebook target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://wa.me/918584884975" data-social-whatsapp target="_blank" rel="noreferrer">WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <h3>Support</h3>
+        <a href="orders.html">Track Orders</a>
+        <a href="gift-card.html">Gift Cards</a>
+        <a href="events.html">Bulk Orders</a>
+      </div>
+      <div>
+        <h3>Franchise</h3>
+        <p data-footer-franchise>Start your Mocky Pops Franchise at Rs. 16,000</p>
+        <a class="footer-cta" href="franchise.html">Apply Now</a>
+      </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+    <script src="ai.js"></script>
+    <script src="phase4.js"></script>
+  </body>
+</html>

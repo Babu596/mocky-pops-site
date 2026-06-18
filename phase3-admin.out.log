@@ -1,0 +1,4 @@
+INFO:     127.0.0.1:54458 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54463 - "GET /api/ai/business-assistant HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54465 - "GET /api/ai/inventory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54469 - "POST /api/ai/marketing HTTP/1.1" 200 OK

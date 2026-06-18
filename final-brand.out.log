@@ -1,0 +1,7 @@
+2026-06-18 12:24:58,607 INFO [mocky_pops.api] GET /api/site/settings -> 200 179.01ms
+INFO:     127.0.0.1:50245 - "GET /api/site/settings HTTP/1.1" 200 OK
+2026-06-18 12:24:58,737 INFO [mocky_pops.notifications] notification queued audience=admin channel=in_app title=New franchise request
+2026-06-18 12:24:58,750 INFO [mocky_pops.api] POST /api/business/franchise/applications -> 201 137.75ms
+INFO:     127.0.0.1:50248 - "POST /api/business/franchise/applications HTTP/1.1" 201 Created
+2026-06-18 12:24:58,817 INFO [mocky_pops.api] GET /api/products -> 200 49.46ms
+INFO:     127.0.0.1:50251 - "GET /api/products HTTP/1.1" 200 OK

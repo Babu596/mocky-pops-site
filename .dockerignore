@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+*.pyc
+*.log
+phase*-*.log
+uvicorn*.log
+server*.log
+node_modules

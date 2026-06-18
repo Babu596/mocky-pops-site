@@ -1,0 +1,12 @@
+2026-06-18 01:55:52,696 INFO [mocky_pops.api] POST /api/auth/login -> 200 159.38ms
+INFO:     127.0.0.1:55673 - "POST /api/auth/login HTTP/1.1" 200 OK
+2026-06-18 01:55:52,718 INFO [mocky_pops.api] GET /api/site/settings -> 200 10.88ms
+INFO:     127.0.0.1:55675 - "GET /api/site/settings HTTP/1.1" 200 OK
+2026-06-18 01:55:52,764 INFO [mocky_pops.api] PUT /api/site/settings -> 200 34.23ms
+INFO:     127.0.0.1:55677 - "PUT /api/site/settings HTTP/1.1" 200 OK
+2026-06-18 01:55:52,806 INFO [mocky_pops.api] POST /api/admin/categories -> 201 30.94ms
+INFO:     127.0.0.1:55678 - "POST /api/admin/categories HTTP/1.1" 201 Created
+2026-06-18 01:55:52,861 INFO [mocky_pops.api] POST /api/admin/products -> 201 48.93ms
+INFO:     127.0.0.1:55679 - "POST /api/admin/products HTTP/1.1" 201 Created
+2026-06-18 01:55:52,882 INFO [mocky_pops.api] GET /api/products -> 200 16.19ms
+INFO:     127.0.0.1:55681 - "GET /api/products HTTP/1.1" 200 OK

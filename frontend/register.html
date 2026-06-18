@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="register">
+    <main class="customer-auth-shell">
+      <section class="customer-auth-card wide">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">MP</span>
+          <span><strong>Mocky Pops</strong><small>Fresh delivery account</small></span>
+        </a>
+        <div>
+          <p class="eyebrow">New customer</p>
+          <h1>Create your Mocky Pops account</h1>
+        </div>
+        <form class="checkout-form" data-register-form>
+          <div class="form-grid">
+            <label>Name <input type="text" name="name" required /></label>
+            <label>Phone <input type="tel" name="phone" required /></label>
+          </div>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Password <input type="password" name="password" minlength="8" required /></label>
+          <label>Address <textarea name="address" rows="4" required></textarea></label>
+          <button class="checkout-button" type="submit">Register</button>
+          <a class="text-action" href="login.html">Already have an account?</a>
+          <p class="admin-message" data-customer-message></p>
+        </form>
+      </section>
+    </main>
+    <script src="customer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery Partner | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="delivery">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">MP</span><span><strong>Mocky Pops</strong><small>Delivery partner</small></span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="login.html">Login</a></nav>
+      <button class="cart-button" type="button" data-customer-logout>Logout</button>
+    </header>
+    <main class="page-shell">
+      <section class="page-hero compact-hero">
+        <p class="eyebrow">Delivery queue</p>
+        <h1>Assigned Orders</h1>
+        <p>View customer addresses and update delivery status.</p>
+      </section>
+      <section class="orders-section">
+        <div class="order-history-list" data-delivery-orders></div>
+        <div class="orders-toolbar">
+          <div>
+            <p class="eyebrow">Completed route</p>
+            <h2>Delivery History</h2>
+          </div>
+        </div>
+        <div class="order-history-list" data-delivery-history></div>
+      </section>
+    </main>
+    <script src="customer.js"></script>
+    <script src="delivery.js"></script>
+  </body>
+</html>

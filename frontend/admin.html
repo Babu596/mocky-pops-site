@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="admin" class="admin-body">
+    <aside class="admin-sidebar">
+      <a class="brand" href="admin.html" aria-label="Mocky Pops admin home">
+        <span class="brand-mark">MP</span>
+        <span>
+          <strong>Mocky Pops</strong>
+          <small>Business admin</small>
+        </span>
+      </a>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#products">Products</a>
+        <a href="#orders">Orders</a>
+        <a href="#categories">Categories</a>
+        <a href="#ai">AI BI</a>
+        <a href="#phase4">Franchise</a>
+        <a href="#settings">Settings</a>
+      </nav>
+      <button class="admin-secondary-button" type="button" data-admin-logout>Logout</button>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">Owner dashboard</p>
+          <h1>Mocky Pops Control Room</h1>
+        </div>
+        <div class="admin-header-actions">
+          <a class="admin-secondary-button" href="index.html">Customer site</a>
+          <button class="admin-primary-button" type="button" data-refresh-admin>Refresh</button>
+        </div>
+      </header>
+
+      <p class="admin-message" data-admin-message></p>
+
+      <section class="admin-section" id="dashboard">
+        <div class="admin-section-heading">
+          <h2>Dashboard</h2>
+          <span data-admin-user>Secure admin session</span>
+        </div>
+        <div class="admin-metric-grid">
+          <article class="admin-metric-card">
+            <span>Total Orders</span>
+            <strong data-total-orders>0</strong>
+          </article>
+          <article class="admin-metric-card">
+            <span>Today's Sales</span>
+            <strong data-todays-sales>Rs. 0</strong>
+          </article>
+          <article class="admin-metric-card">
+            <span>Total Revenue</span>
+            <strong data-total-revenue>Rs. 0</strong>
+          </article>
+          <article class="admin-metric-card">
+            <span>Total Customers</span>
+            <strong data-total-customers>0</strong>
+          </article>
+        </div>
+
+        <div class="admin-dashboard-grid">
+          <article class="admin-panel">
+            <h3>Sales Analytics</h3>
+            <div class="admin-chart" data-sales-chart></div>
+          </article>
+          <article class="admin-panel">
+            <h3>Popular Products</h3>
+            <div class="admin-list" data-popular-products></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="admin-section" id="products">
+        <div class="admin-section-heading">
+          <h2>Product Management</h2>
+          <span>Add, edit, delete and control availability</span>
+        </div>
+        <div class="admin-workspace">
+          <form class="admin-panel admin-form" data-product-form>
+            <input type="hidden" name="db_id" />
+            <label>
+              Product name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Slug
+              <input type="text" name="slug" placeholder="citrus-pop-mojito" required />
+            </label>
+            <label>
+              Category
+              <select name="category_slug" data-category-options required></select>
+            </label>
+            <label>
+              Price
+              <input type="number" name="price" min="1" step="0.01" required />
+            </label>
+            <label>
+              Rating
+              <input type="number" name="rating" min="1" max="5" step="0.1" value="4.5" />
+            </label>
+            <label>
+              Image URL
+              <input type="url" name="image_url" placeholder="https://..." />
+            </label>
+            <label>
+              Upload image
+              <input type="file" name="image_file" accept="image/*" data-product-image />
+            </label>
+            <label>
+              Ingredients
+              <input type="text" name="ingredients" placeholder="Lime, Mint, Soda" />
+            </label>
+            <label>
+              Customization options
+              <textarea name="customizations" rows="4" placeholder="Sugar: Regular, Less, No added&#10;Ice: Normal, Light, Extra&#10;Size: Regular, Large"></textarea>
+            </label>
+            <label>
+              Description
+              <textarea name="description" rows="4" required></textarea>
+            </label>
+            <label class="admin-switch">
+              <input type="checkbox" name="is_available" checked />
+              <span>In stock and visible</span>
+            </label>
+            <div class="admin-form-actions">
+              <button class="admin-primary-button" type="submit">Save Product</button>
+              <button class="admin-secondary-button" type="button" data-reset-product-form>Clear</button>
+              <button class="admin-secondary-button" type="button" data-remove-product-image>Remove Image</button>
+            </div>
+          </form>
+
+          <div class="admin-panel">
+            <h3>Products</h3>
+            <div class="admin-table-wrap">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody data-products-table></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section" id="orders">
+        <div class="admin-section-heading">
+          <h2>Order Management</h2>
+          <span>Customer details, items and delivery status</span>
+        </div>
+        <div class="admin-panel">
+          <div class="admin-list" data-orders-list></div>
+        </div>
+      </section>
+
+      <section class="admin-section" id="categories">
+        <div class="admin-section-heading">
+          <h2>Categories</h2>
+          <span>Manage product grouping</span>
+        </div>
+        <div class="admin-workspace compact">
+          <form class="admin-panel admin-form" data-category-form>
+            <input type="hidden" name="id" />
+            <label>
+              Category name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Slug
+              <input type="text" name="slug" required />
+            </label>
+            <label class="admin-switch">
+              <input type="checkbox" name="is_active" checked />
+              <span>Active</span>
+            </label>
+            <div class="admin-form-actions">
+              <button class="admin-primary-button" type="submit">Save Category</button>
+              <button class="admin-secondary-button" type="button" data-reset-category-form>Clear</button>
+            </div>
+          </form>
+          <div class="admin-panel">
+            <h3>Categories</h3>
+            <div class="admin-list" data-categories-list></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section" id="ai">
+        <div class="admin-section-heading">
+          <h2>AI Business Intelligence</h2>
+          <span>Insights, inventory prediction and marketing ideas</span>
+        </div>
+        <div class="admin-dashboard-grid">
+          <article class="admin-panel">
+            <h3>Owner Assistant</h3>
+            <div class="admin-list" data-ai-business></div>
+          </article>
+          <article class="admin-panel">
+            <h3>Inventory Prediction</h3>
+            <div class="admin-list" data-ai-inventory></div>
+          </article>
+        </div>
+        <div class="admin-panel ai-marketing-panel">
+          <div class="admin-section-heading">
+            <h3>Marketing Assistant</h3>
+            <button class="admin-primary-button" type="button" data-generate-marketing>Generate Ideas</button>
+          </div>
+          <div class="admin-list" data-ai-marketing></div>
+        </div>
+      </section>
+
+      <section class="admin-section" id="phase4">
+        <div class="admin-section-heading">
+          <h2>Franchise & Growth</h2>
+          <span>Applications, outlets, royalties, gift cards and event enquiries</span>
+        </div>
+        <div class="admin-dashboard-grid">
+          <article class="admin-panel">
+            <h3>Franchise Applications</h3>
+            <div class="admin-list" data-franchise-applications></div>
+          </article>
+          <article class="admin-panel">
+            <h3>Outlets</h3>
+            <form class="admin-form" data-outlet-form>
+              <input name="name" placeholder="Store name" required />
+              <input name="address" placeholder="Address" required />
+              <input name="contact_number" placeholder="Contact number" required />
+              <input name="manager" placeholder="Manager" />
+              <input name="operating_hours" placeholder="10 AM - 11 PM" />
+              <input name="location" placeholder="City / area" />
+              <button class="admin-primary-button" type="submit">Add Outlet</button>
+            </form>
+            <div class="admin-list" data-outlets-list></div>
+          </article>
+        </div>
+        <div class="admin-dashboard-grid">
+          <article class="admin-panel">
+            <h3>Bulk & Event Enquiries</h3>
+            <div class="admin-list" data-bulk-orders></div>
+          </article>
+          <article class="admin-panel">
+            <h3>Reports</h3>
+            <div class="admin-list" data-phase4-reports></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="admin-section" id="settings">
+        <div class="admin-section-heading">
+          <h2>Brand Settings</h2>
+          <span>Franchise pricing, social links and customer support details</span>
+        </div>
+        <form class="admin-panel admin-form" data-site-settings-form>
+          <label>
+            Franchise starting amount
+            <input type="number" name="franchise_amount" min="1" required />
+          </label>
+          <label>
+            Instagram URL
+            <input type="url" name="instagram_url" required />
+          </label>
+          <label>
+            Facebook URL
+            <input type="url" name="facebook_url" required />
+          </label>
+          <label>
+            WhatsApp number
+            <input name="whatsapp_number" required />
+          </label>
+          <label>
+            Support email
+            <input type="email" name="support_email" required />
+          </label>
+          <label>
+            Brand description
+            <textarea name="brand_description" rows="4" required></textarea>
+          </label>
+          <button class="admin-primary-button" type="submit">Save Settings</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franchise | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="franchise">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">MP</span><span><strong>Mocky Pops</strong><small>Franchise platform</small></span></a>
+      <nav class="nav-links"><a href="index.html">Home</a><a href="franchise-owner.html">Owner Portal</a><a href="events.html">Events</a></nav>
+    </header>
+    <main class="page-shell">
+      <section class="page-hero compact-hero">
+        <p class="eyebrow">Franchise application</p>
+        <h1>Build a Mocky Pops outlet</h1>
+        <p>Apply for franchise ownership with investment, location and experience details.</p>
+      </section>
+      <section class="customer-dashboard">
+        <form class="checkout-form" data-franchise-form>
+          <h2>Apply Now</h2>
+          <label>Name <input name="applicant_name" required /></label>
+          <label>Phone <input name="phone" required /></label>
+          <label>Email <input name="email" type="email" required /></label>
+          <label>Location <input name="location" required /></label>
+          <label>Investment details <textarea name="investment_details" rows="4" required></textarea></label>
+          <label>Experience details <textarea name="experience_details" rows="4"></textarea></label>
+          <label>Document URL <input name="document_url" placeholder="https://..." /></label>
+          <button class="checkout-button" type="submit">Submit Application</button>
+          <p class="admin-message" data-phase4-message></p>
+        </form>
+        <aside class="summary-card">
+          <h2>Franchise Includes</h2>
+          <p>Owner portal, store reports, royalty tracking, outlet operations and inventory workflows.</p>
+        </aside>
+      </section>
+    </main>
+    <script src="phase4.js"></script>
+  </body>
+</html>

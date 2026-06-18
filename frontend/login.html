@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="login">
+    <main class="customer-auth-shell">
+      <section class="customer-auth-card">
+        <a class="brand" href="index.html">
+          <span class="brand-mark">MP</span>
+          <span><strong>Mocky Pops</strong><small>Customer account</small></span>
+        </a>
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h1>Login to order faster</h1>
+        </div>
+        <form class="checkout-form" data-login-form>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Password <input type="password" name="password" required /></label>
+          <button class="checkout-button" type="submit">Login</button>
+          <a class="text-action" href="register.html">Create account</a>
+          <p class="admin-message" data-customer-message></p>
+        </form>
+      </section>
+    </main>
+    <script src="customer.js"></script>
+  </body>
+</html>

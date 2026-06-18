@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="profile">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">MP</span><span><strong>Mocky Pops</strong><small>My account</small></span></a>
+      <nav class="nav-links">
+        <a href="index.html#menu">Menu</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="tracking.html">Tracking</a>
+      </nav>
+      <button class="cart-button" type="button" data-customer-logout>Logout</button>
+    </header>
+    <main class="page-shell">
+      <section class="page-hero compact-hero">
+        <p class="eyebrow">Customer profile</p>
+        <h1>Your delivery account</h1>
+        <p>Manage profile, password and delivery addresses.</p>
+      </section>
+      <section class="customer-dashboard">
+        <form class="checkout-form" data-profile-form>
+          <h2>Profile</h2>
+          <label>Name <input name="name" required /></label>
+          <label>Email <input name="email" type="email" required /></label>
+          <label>Phone <input name="phone" /></label>
+          <button class="checkout-button" type="submit">Save Profile</button>
+        </form>
+        <form class="checkout-form" data-password-form>
+          <h2>Change Password</h2>
+          <label>Current password <input name="current_password" type="password" required /></label>
+          <label>New password <input name="new_password" type="password" minlength="8" required /></label>
+          <button class="checkout-button" type="submit">Update Password</button>
+        </form>
+        <form class="checkout-form" data-address-form>
+          <h2>Delivery Addresses</h2>
+          <input type="hidden" name="id" />
+          <label>Name <input name="customer_name" required /></label>
+          <label>Phone <input name="phone" required /></label>
+          <label>Address <textarea name="address_line" rows="4" required></textarea></label>
+          <label>Instructions <input name="delivery_instructions" /></label>
+          <button class="checkout-button" type="submit">Save Address</button>
+        </form>
+        <div class="summary-card">
+          <h2>Saved Addresses</h2>
+          <div class="admin-list" data-address-list></div>
+          <p class="admin-message" data-customer-message></p>
+        </div>
+      </section>
+    </main>
+    <script src="customer.js"></script>
+  </body>
+</html>

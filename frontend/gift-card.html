@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gift Cards | Mocky Pops</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="gift-card">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">MP</span><span><strong>Mocky Pops</strong><small>Digital gifting</small></span></a>
+      <nav class="nav-links"><a href="index.html#menu">Menu</a><a href="loyalty.html">Loyalty</a><a href="profile.html">Profile</a></nav>
+    </header>
+    <main class="page-shell">
+      <section class="page-hero compact-hero">
+        <p class="eyebrow">Gift card</p>
+        <h1>Send a sip-worthy surprise</h1>
+      </section>
+      <section class="customer-dashboard">
+        <form class="checkout-form" data-gift-card-form>
+          <h2>Buy Gift Card</h2>
+          <label>Amount <input type="number" name="amount" min="100" step="50" required /></label>
+          <label>Recipient email <input type="email" name="recipient_email" /></label>
+          <label>Message <textarea name="message" rows="4"></textarea></label>
+          <button class="checkout-button" type="submit">Create Gift Card</button>
+          <p class="admin-message" data-phase4-message></p>
+        </form>
+        <aside class="summary-card order-confirmation show" data-gift-card-result>
+          <strong>Your gift card code will appear here</strong>
+        </aside>
+      </section>
+    </main>
+    <script src="phase4.js"></script>
+  </body>
+</html>
